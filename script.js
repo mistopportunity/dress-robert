@@ -83,7 +83,7 @@
         loaded++;
         if(loaded >= layers.length) {
             finishedLoad = true;
-            //renderLayers();
+            renderLayers();
         }
     }
     function imageFailed() {
