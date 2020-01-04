@@ -35,7 +35,7 @@
     }
     function renderText(message) {
         context.fillStyle = "white";
-        context.fillText(message,5,5);
+        context.fillText(message,5,25);
     }
     function renderImage(index) {
         context.drawImage(layers[index],0,0);
@@ -83,7 +83,7 @@
         loaded++;
         if(loaded >= layers.length) {
             finishedLoad = true;
-            renderLayers();
+            //renderLayers();
         }
     }
     function imageFailed() {
