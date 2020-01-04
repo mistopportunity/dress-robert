@@ -1,15 +1,18 @@
 (function(){
     var LAYER_ROOT = "layers";
     var LAYER_TYPE = "png";
-    var CANVAS_WIDTH = 612;
-    var CANVAS_HEIGHT = 461;
+
+    var LAYER_WIDTH = 612;
+    var LAYER_HEIGHT = 461;
+
     var layers = ["Base","Thong","Pants","Shirt"];
+
     var base = 0;
     var layer1 = 1;
 
     var canvas = document.getElementById("canvas");
-    canvas.width = CANVAS_WIDTH;
-    canvas.height = CANVAS_HEIGHT;
+    canvas.width = LAYER_WIDTH;
+    canvas.height = LAYER_HEIGHT;
     var context = canvas.getContext("2d");
     context.font = "22px Arial";
 
@@ -31,7 +34,7 @@
 
     function renderClear() {
         context.fillStyle = "black";
-        context.fillRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
+        context.fillRect(0,0,LAYER_WIDTH,LAYER_HEIGHT);
     }
     function renderText(message) {
         context.fillStyle = "white";
