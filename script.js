@@ -11,7 +11,6 @@
     canvas.width = CANVAS_WIDTH;
     canvas.height = CANVAS_HEIGHT;
     var context = canvas.getContext("2d");
-    context.fillStyle = "black";
     context.font = "22px Arial";
 
     var layerData = new Array(layers.length).fill(true);
@@ -31,9 +30,11 @@
     }
 
     function renderClear() {
+        context.fillStyle = "black";
         context.fillRect(0,0,CANVAS_WIDTH,CANVAS_HEIGHT);
     }
     function renderText(message) {
+        context.fillStyle = "white";
         context.fillText(message,5,5);
     }
     function renderImage(index) {
